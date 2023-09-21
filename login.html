@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>login</title>
+    </head>
+
+    <style>
+        body{
+            background-image: url(photo-1497864149936-d3163f0c0f4b.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .table {
+  padding-left: 500px;
+  padding-right: 500px;
+  padding-top: 100;
+}
+table{
+    align-items: center;
+}
+   </style>
+    <body>
+        <div class="table">
+            <table>
+                <tr>
+            <td>
+            Admin<a href="admin.html"><img src="istockphoto-1257689100-612x612.jpg" alt="image" width=20 height=20></a>
+                </td>
+            <td>
+        <a href="registerform.html"><img src="click-here-to-register-button-2.png" width="100" height="40"></a>
+            </td>
+                </tr>
+            </table>
+    <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<img src="images.jpeg" alt="Avatar" class="avatar">
+            <table>
+                <tr>
+                
+          <td><label><b>Username</b></label></td>
+          <td><input type="text" placeholder="Enter Username" id="username" name="uname" required></td>
+                </tr>
+                <tr>
+      
+          <td><label><b>Password</b></label></td>
+          <td><input type="password" placeholder="Enter Password" id="password" name="psw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>
+                          <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label></td>
+                        <td></td>
+                      </tr>
+                    <tr>
+                        <td></td>
+                    <center><td colspan="2"><input type="submit" onclick="login()" placeholder="login"/></td></center>
+                    </tr>
+                    <tr>
+           <td>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<button type="button" class="cancelbtn">Cancel</button></td>
+          <td>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Forgot<a href="#">password?</a></td>
+                    </tr>
+
+    </div>
+    <script>
+        function login(){
+          var username = document.getElementById("username").value;
+          var pwd = document.getElementById("password").value;
+          if (username == "ycharan" && pwd== "Welcome@123") {
+          window.location.assign('ycharan.html')
+          } 
+          else if(username == "megha" && pwd== "Welcome@1234") {
+            window.location.assign('meghanath.html');
+          
+          }
+          else {
+            alert("not found");
+          }
+        }
+        </script>
+
+
+      </body>
+</html>

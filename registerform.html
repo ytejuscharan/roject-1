@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>the html document</title>
+<script>
+function enableSubmit(){
+let inputs = document.getElementsByClassName('required'); // Enter your class name for a required field, this should also be reflected within your form fields.
+let btn = document.querySelector('input[type="submit"]');
+let isValid = true;
+for (var i = 0; i < inputs.length; i++){
+let changedInput = inputs[i];
+if (changedInput.value.trim() === "" || changedInput.value === null){
+isValid = false;
+break;
+}
+}
+btn.disabled = !isValid;
+}
+</script>
+
+<style>
+body{
+	background-image: url('Twin-Card-BB_RR21_RR21_Product_Page.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-image:fixed;
+	 margin-top: 250px;
+ 	 margin-bottom: 200px;
+  	margin-right: 200px;
+  	margin-left:200px;
+}
+label{
+	color: white;
+}
+.charan{
+	opacity:0.5;
+}
+.mail{
+	padding:20,20,20,0;
+}
+</style>
+</head>
+<body>
+
+<form action="video.html">
+<div class="mail">
+<table style="align-items:left">
+<tr>
+<td><a href="mailto:ytejusc@gmail.com"><img src="download.png" width=20 height=20></a></td>
+<td><a href="tel:866001635"><img src="download1.png" width=20 height=20></a></td>
+</tr>
+</table>
+<div class="charan">
+<fieldset>
+<legend style="color:white">Register form</legend>
+<table align="center" >
+<tbody>
+<tr>
+<td><label for="name">Name</label></td>
+<td><input type="text" id="name" placeholder="Enter name" name="name" class="required onkeyup="enableSubmit()">
+</tr>
+<tr>
+<td><label for="Sname">Surname</label></td>
+<td><input type="text" id="Sname" placeholder="Surname" class="required" onkeyup="enableSubmit()">
+</tr>
+<tr>
+<td><label for="mail">Email</label></td>
+<td><input type="email" name="email" id="mail" placeholder="Enter email" class="required" onkeyup="enableSubmit()">
+</tr>
+<tr>
+<td><label for="mobile">Phone no:</label></td>
+<td><input type="tel" name="phone" id="mobile" placeholder="Contact" class="required"  onkeyup="enableSubmit()">
+</tr>
+<tr>
+<td><label>Gender:</label></td>
+<td><label>male</label>
+<input type="radio" id=01 name="test" class="radio1" onkeyup="enableSubmit()"/>
+<label>Female</label>
+<input type="radio" id=02 name="test" class="radio2" onkeyup="enableSubmit()"/>
+<label>not to known</label>
+<input type="radio" id=03 name="test" class="radio3" onkeyup="enableSubmit()"/>
+</td>
+</tr>
+</table>
+</fieldset>
+</div>
+</br>
+<div class="submit">
+<section>
+	</section>
+	<table align="center">
+		<tr>
+
+<td><input type="submit" name="btn" class="control" id="Btn" disabled></a></td>
+<td><input type="reset" value="Reset"></td>
+		</tr>
+	</table>
+</section>
+</div>
+</div>
+</form>
+</body>
+</html>
+

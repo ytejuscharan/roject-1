@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>login_page</title>
+<style>
+div {
+	padding-top:250px;
+	padding-left:650px;
+}
+body{
+	background-image: url('240_F_579485255_hzHox0stuQmBx5QViwnQqQjk7RD2AJza.jpg');
+	background-size:cover;
+	background-repeat:no repeat;
+}
+        .submit-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none; 
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .submit-button span {
+            display: inline-block;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .submit-button:hover span {
+            transform: translateY(-50%);
+        }
+
+        .submit-button::before {
+            content: "";
+            position: absolute;
+            background: #0056b3;
+            bottom: 0;
+            left: 0;
+            right: 100%;
+            top: 0;
+            z-index: -1;
+            transition: right 0.3s;
+        }
+
+        .submit-button:hover::before {
+            right: 0;
+        }
+</style>
+</head>
+<body>
+<div class="div1">
+<form name="myform" method="post">
+<table border=1>
+<tr>
+<td><center><input type="email" placeholder="Example@gmail.com" id="name" class="inputText" name="uname" required/></center></td>
+</tr>
+</table>
+<br>
+        <!-- Your form fields here -->
+<button type="submit" class="submit-button" name="log" value="login" onclick="login()"/><span>Submit</span></button>
+    </form>
+</div>
+<script type="javascript">
+function login() {
+  var username = document.getElementById("name").value;
+
+  if (username == "ytejusc@gmail.com") {
+    window.location.assign ("charan.html");
+  } else {
+    alert("Incorrect username or password.");
+    return;
+  }
+}
+</script>
+</body>
+</html>
